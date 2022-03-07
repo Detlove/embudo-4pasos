@@ -1,0 +1,40 @@
+.cont{
+  width: 92%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  background-color: rgba(255, 255, 255, .1);
+  backdrop-filter: blur(5px);
+}
+.player{
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.player iframe{
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.title{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 15px 10px;
+}
+.title span{
+  color: var(--black);
+  background-color: var(--primary);
+  font-weight: 800;
+  padding: 0 5px;
+}
+
+@media screen and (min-width: 800px){
+  .title{
+    font-size: 20px;
+  }
+}

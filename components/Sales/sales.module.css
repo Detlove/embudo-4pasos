@@ -1,0 +1,19 @@
+.cont{
+  width: 270px;
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.cont strong{
+  font-weight: 600;
+}
+.text{
+  padding: 10px 20px;
+}
+.t1{
+  margin-bottom: 10px;
+}
