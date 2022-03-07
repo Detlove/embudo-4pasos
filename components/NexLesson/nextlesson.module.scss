@@ -16,6 +16,7 @@
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.1);
   cursor: pointer;
+  margin-bottom: 20px;
   img, .lockicon, .button_text{
     opacity: .6;
     transition: opacity 1s ease;
@@ -62,6 +63,12 @@
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.message{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 @keyframes wobble {

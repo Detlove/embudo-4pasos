@@ -22,5 +22,11 @@ export const data = {
     title: 'A un solo click de lograr tus ventas por Whatsapp',
     thtml: <>A UN SOLO CLICK DE <span>LOGRAR TUS VENTAS POR WHATSAPP</span></>,
     unlock: 0.473
+  },
+  5: {
+    id: 675710937,
+    title: 'A un solo click de lograr tus ventas por Whatsapp',
+    thtml: <>A UN SOLO CLICK DE <span>LOGRAR TUS VENTAS POR WHATSAPP</span></>,
+    unlock: 0.473
   }
 }

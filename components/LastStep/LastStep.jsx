@@ -4,17 +4,23 @@ import SGift from './SGift'
 import styles from './laststep.module.css'
 import { useState, useEffect } from 'react'
 
-export const LastStep = ({ unlock, setLanding }) => {
-  const [step, setStep] = useState(1)
+export const LastStep = ({ router, unlock, step }) => {
+  const [iStep, setIStep] = useState(1)
+  console.log(step)
 
   useEffect(() => {
-    unlock && setStep(2)
+    step === 5 &&
+    setIStep(3)
+  }, [step])
+
+  useEffect(() => {
+    unlock && setIStep(2)
   }, [unlock])
 
   return (
     <>
       {
-        step === 1 &&
+        iStep === 1 &&
           <section className={styles.cont}>
             <h3 className={styles.title}>Estamos preparando algo especial para ti</h3>
             <SClock
@@ -27,7 +33,7 @@ export const LastStep = ({ unlock, setLanding }) => {
           </section>
       }
       {
-        step === 2 &&
+        iStep === 2 &&
           <section className={styles.cont}>
             <h3 className={styles.title}>Presiona el regalo y revela el precio especial que tenemos para ti</h3>
             <SGift
@@ -36,16 +42,16 @@ export const LastStep = ({ unlock, setLanding }) => {
               height='100px'
               fill='#fff'
               onClick={() => {
-                setStep(3)
+                setIStep(3)
                 setTimeout(() => {
-                  setLanding(true)
+                  router.push('5')
                 }, 5000)
               }}
             />
           </section>
       }
       {
-        step === 3 &&
+        iStep === 3 &&
           <section
             className={styles.cont_f}
           >
