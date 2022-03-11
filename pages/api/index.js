@@ -15,7 +15,7 @@ function getRandom (arr, n) {
 }
 
 function Api (req, res) {
-  const response = {}
+  const response = []
   const randUsers = getRandom(users, 5)
   const randLocations = getRandom(locations, 5)
 
