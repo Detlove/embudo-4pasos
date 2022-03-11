@@ -3,7 +3,8 @@ import '@styles/global.css'
 import { Loader } from '@components/Loader/Loader'
 
 function MyApp ({ Component, pageProps }) {
-  const [loader, setLoader] = useState(true)
+  /* Disable Loader for develop */
+  const [loader, setLoader] = useState(false)
   return (
     <>
       <Loader active={loader} />
