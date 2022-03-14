@@ -1,6 +1,7 @@
 .message{
   padding: 20px 0;
   background-color: var(--primary);
+  color: var(--foreground);
   p{
     width: 92%;
     margin: 0 auto;
@@ -19,8 +20,10 @@
 }
 
 .sale{
-  background: linear-gradient(90deg, #000000 0%, #002017 100%);
-  color: #fff;
+  /* background: linear-gradient(90deg, #000000 0%, #002017 100%); */
+  background-color: var(--foreground);
+  backdrop-filter: blur(30px);
+  color: var(--secondary);
   &_cont{
     width: 92%;
     max-width: 800px;
@@ -38,6 +41,12 @@
   }
 }
 
+.img{
+  max-width: 550px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
 .price, .price2{
   display: block;
   text-align: center;
@@ -51,7 +60,7 @@
   justify-content: center;
   column-gap: 8px;
   strong{
-    color: #09BB96;
+    color: var(--primary);
     font-size: 35px;
     font-weight: 800;
   }
@@ -60,21 +69,21 @@
 .price2{
   font-size: 18px;
   font-weight: 400;
-  margin-top: 10px;
-  margin-bottom: 50px;
+  margin-top: 0px;
+  margin-bottom: 40px;
   strong{
     font-size: 20px;
     font-weight: 600;
-    color: #09BB96;
+    color: var(--primary);
   }
 }
 
 .button{
   animation: wobble 2.5s 1s ease infinite;
-  background-color: #DD2020;
+  background-color: var(--primary);
   border-radius: 5px;
   border: none;
-  color: #fff;
+  color: var(--foreground);
   cursor: pointer;
   display: block;
   font-size: 22px;

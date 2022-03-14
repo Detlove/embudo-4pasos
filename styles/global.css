@@ -1,26 +1,18 @@
+@import url('./reset.css');
 :root{
-  --white: rgb(255, 255, 255);
-  --black: rgb(0, 0, 0);
-  --primary: rgb(58, 255, 102);
-}
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
+  --primary: #FF6363;
+  --secondary: #010033;
+  --secondary0: rgba(1, 0, 51, 0.95);
+  --foreground: #EDEDED;
 }
 body{
-  font-family: Montserrat;
+  font-family: Poppins;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  color: var(--foreground);
 }
 body::-webkit-scrollbar {
   display: none;
-}
-#__next{
-  position: relative;
 }
 
 @keyframes wobble {

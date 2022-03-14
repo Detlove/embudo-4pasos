@@ -1,36 +1,57 @@
 import Vimeo from '@u-wave/react-vimeo'
 import { useState } from 'react'
+import { useAula } from 'pages/aula/AulaContext'
+import { useApp } from 'pages/AppContext'
 
 import styles from './video.module.css'
-export const Video = ({ id, thtml, pntToUnlock, setUnlock, setLoader }) => {
+export const Video = () => {
+  const { setUnlock, data, step, pauseVideo, setPauseVideo } = useAula()
+
+  const { setLoader } = useApp()
+
   const [ready, setReady] = useState(false)
+  const [finish, setFinish] = useState(false)
 
   const onTimeUpdate = ({ percent }) => {
-    if (ready & percent > pntToUnlock) {
+    if (ready & percent > data[step].pntToUnlock) {
       setUnlock(true)
       setReady(false)
     }
   }
 
+  const hidePlayer = () => {
+    setFinish(true)
+  }
+
   return (
     <section className={styles.cont}>
-      <h1 className={styles.title}>{thtml}</h1>
+      <h1 className={styles.title}>{data[step].thtml}
+      </h1>
       <Vimeo
-        video={id}
-        className={styles.player}
-        showByline={false}
-        controls
+        video={data[step].id}
+        className={`${styles.player} ${finish ? styles.hide : ''}`}
+        controls={false}
         showPortrait={false}
         showTitle={false}
+        showByline={false}
         autoplay
-        color='3aff66'
+        color='FF6363'
+        onPlay={() => {
+          if (pauseVideo) {
+            setPauseVideo(false)
+            setPauseVideo(true)
+          }
+        }}
         onLoaded={() => {
           setReady(true)
+          setFinish(false)
         }}
         onReady={() => {
           setLoader(false)
         }}
         onTimeUpdate={onTimeUpdate}
+        onEnd={hidePlayer}
+        paused={pauseVideo}
       />
     </section>
   )

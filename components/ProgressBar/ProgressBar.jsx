@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react'
+import { useAula } from 'pages/aula/AulaContext'
 import styles from './progressbar.module.css'
 
-export const ProgressBar = ({ step = 4 }) => {
+export const ProgressBar = () => {
+  const { step, dataLength } = useAula()
   const [val, setVal] = useState(0)
 
   useEffect(() => {
-    setVal(step <= 3 ? step * 25 : 99)
+    const value = step * (100 / dataLength)
+    setVal(value > 99 ? 99 : value)
   }, [step])
 
   return (

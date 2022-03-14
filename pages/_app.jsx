@@ -1,16 +1,21 @@
-import { useState } from 'react'
 import '@styles/global.css'
 import { Loader } from '@components/Loader/Loader'
 
-function MyApp ({ Component, pageProps }) {
-  /* Disable Loader for develop */
-  const [loader, setLoader] = useState(false)
+import { AppProvider } from './AppContext.js'
+
+export default ({ Component, pageProps }) => {
   return (
-    <>
-      <Loader active={loader} />
-      <Component loader={loader} setLoader={setLoader} {...pageProps} />
-    </>
+    <AppProvider>
+      <MyApp {...{ Component, pageProps }} />
+    </AppProvider>
   )
 }
 
-export default MyApp
+function MyApp ({ Component, pageProps }) {
+  return (
+    <>
+      <Loader />
+      <Component {...pageProps} />
+    </>
+  )
+}

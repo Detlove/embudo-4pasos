@@ -16,25 +16,32 @@ export const Landing = () => {
       <section className={styles.sale} id='landing'>
         <div className={styles.sale_cont}>
           <div id='flipdown' className={`flipdown ${styles.flipdown}`} />
-          <h2>¿ESTÁS LISTO PARA <strong>DUPLICAR LAS VENTAS DE TU NEGOCIO</strong> CON WHATSAPP?</h2>
-          <Image src='/box.png' width={1000} height={343} layout='responsive' className={styles.img} />
-          <span className={styles.price}>UNICO PAGO DE <strong>$99 USD</strong></span>
-          <span className={styles.price2}>o en 12 cuotas de <strong>$8.25 USD</strong></span>
+          <h2>¿ESTÁS LISTO PARA <strong>IMPORTAR TUS PRODUCTOS DESDE USA?</strong></h2>
+          <picture
+            className={styles.img}
+            onClick={() => {
+              window.open(`${process.env.NEXT_PUBLIC_HOTMART_LINK}&src=mockup`, '_blank')
+            }}
+          >
+            <Image src='/assets/box.png' width={600} height={445} layout='responsive' />
+          </picture>
+          <span className={styles.price}>UNICO PAGO DE <strong>$97 USD</strong></span>
+          <span className={styles.price2}>o en 12 cuotas de <strong>$8 USD</strong></span>
           <button
             className={styles.button}
             onClick={() => {
-              window.open('https://go.hotmart.com/A63830245W?ap=2d49&src=boton1', '_blank')
+              window.open(`${process.env.NEXT_PUBLIC_HOTMART_LINK}&src=button_ready`, '_blank')
             }}
           >
             !ESTOY LISTO, PARA DUPLICAR MIS VENTAS!
           </button>
           <picture className={styles.payments}>
             <Image
-              src='/payments.png'
+              src='/assets/payments.png'
               width={569}
               height={77}
               onClick={() => {
-                window.open('https://go.hotmart.com/A63830245W?ap=2d49&src=boton1', '_blank')
+                window.open(`${process.env.NEXT_PUBLIC_HOTMART_LINK}&src=payments`, '_blank')
               }}
             />
           </picture>

@@ -64,7 +64,7 @@
 }
 .price span{
   display: block;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.4);
   text-align: center;
   font-size: 17px;
   font-weight: 400;

@@ -1,15 +1,16 @@
 import SClock from './SClock'
 import SGift from './SGift'
+import { useAula } from 'pages/aula/AulaContext'
 
 import styles from './laststep.module.css'
 import { useState, useEffect } from 'react'
 
-export const LastStep = ({ router, unlock, step }) => {
+export const LastStep = () => {
+  const { router, unlock, step, showLanding } = useAula()
   const [iStep, setIStep] = useState(1)
-  console.log(step)
 
   useEffect(() => {
-    step === 5 &&
+    showLanding &&
     setIStep(3)
   }, [step])
 
@@ -55,20 +56,19 @@ export const LastStep = ({ router, unlock, step }) => {
           <section
             className={styles.cont_f}
           >
-            <p>Sabemos que realmente necesitas duplicar
-              tus ganancias por Whatsapp...
+            <p>Sabemos que realmente quieres importar tus productos desde USA
             </p>
             <p className={styles.t2}>Por ello el precio especial que tenemos para ti
-              tiene un <strong>DESCUENTO DEL 50%!</strong>
+              tiene un <strong>DESCUENTO DE $50 USD!</strong>
             </p>
             <div
               className={styles.price}
               onClick={() => {
-                window.open('https://go.hotmart.com/A63830245W?ap=2d49&src=boton1', '_blank')
+                window.open(`${process.env.NEXT_PUBLIC_HOTMART_LINK}&src=price_button`, '_blank')
               }}
             >
-              <span>Precio sin descuento: <s>$197 USD</s></span>
-              <p>Ahora<strong>$99 USD</strong> </p>
+              <span>Precio sin descuento: <s>$147 USD</s></span>
+              <p>Ahora<strong>$97 USD</strong> </p>
             </div>
           </section>
       }

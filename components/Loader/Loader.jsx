@@ -1,9 +1,11 @@
 import { useTransition, animated as a, config } from 'react-spring'
+import { useApp } from 'pages/AppContext'
 
 import styles from './loader.module.css'
 
-export const Loader = ({ active }) => {
-  const transition = useTransition(active, {
+export const Loader = () => {
+  const { loader } = useApp()
+  const transition = useTransition(loader, {
     initial: { opacity: 1 },
     from: { opacity: 0 },
     enter: { opacity: 1 },

@@ -1,32 +1,26 @@
 export const data = {
   1: {
-    id: 675710796,
-    title: 'Una extraña estrategia de whatsapp que muy pocos están utilizando',
-    thtml: <>Una extraña estrategia de whatsapp que <span>muy pocos</span> están utilizando</>,
-    unlock: 0.95
+    id: 684300405,
+    title: 'ESTO ES LO QUE APRENDERÁS EN EL TUTORIAL GRATUITO',
+    thtml: <>ESTO ES <span>LO QUE APRENDERÁS</span> EN EL TUTORIAL GRATUITO</>,
+    pntToUnlock: 0.95
   },
   2: {
-    id: 675710845,
-    title: '¿Cuáles son los 3 pasos y cómo puedes duplicar tus ventas?',
-    thtml: <>¿CUÁLES SON LOS 3 PASOS Y CÓMO PUEDES <span>DUPLICAR TUS VENTAS</span>?</>,
-    unlock: 0.95
+    id: 684402660,
+    title: '¿POR QUÉ DEBERIAS IMPORTAR DE ESTADOS UNIDOS?',
+    thtml: <>¿POR QUÉ <span>DEBERIAS IMPORTAR</span> DE ESTADOS UNIDOS?</>,
+    pntToUnlock: 0.95
   },
   3: {
-    id: 675710894,
-    title: '¿Cómo estamos ayudando a miles de personas a emprender?',
-    thtml: <>¿CÓMO ESTAMOS AYUDANDO A <span>MILES DE PERSONAS</span> A EMPRENDER?</>,
-    unlock: 0.95
+    id: 684408471,
+    title: 'EL PASO A PASO QUE DEBES SEGUIR PARA IMPORTAR CUALQUIER PRODUCTO DESDE USA',
+    thtml: <>EL PASO A PASO QUE DEBES SEGUIR PARA <span>IMPORTAR CUALQUIER PRODUCTO</span> DESDE USA</>,
+    pntToUnlock: 0.99
   },
   4: {
-    id: 675710937,
-    title: 'A un solo click de lograr tus ventas por Whatsapp',
-    thtml: <>A UN SOLO CLICK DE <span>LOGRAR TUS VENTAS POR WHATSAPP</span></>,
-    unlock: 0.473
-  },
-  5: {
-    id: 675710937,
-    title: 'A un solo click de lograr tus ventas por Whatsapp',
-    thtml: <>A UN SOLO CLICK DE <span>LOGRAR TUS VENTAS POR WHATSAPP</span></>,
-    unlock: 0.473
+    id: 684964797,
+    title: '¡TENGO ALGUNAS SORPRESAS PREPARADAS PARA TI 🎁!',
+    thtml: <>¡TENGO ALGUNAS SORPRESAS <span>PREPARADAS PARA TI</span> 🎁!</>,
+    pntToUnlock: 0.65
   }
 }

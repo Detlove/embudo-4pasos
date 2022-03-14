@@ -1,7 +1,9 @@
+import { useAula } from 'pages/aula/AulaContext'
 import styles from './nextlesson.module.scss'
 import SLock from './SLock'
 
-export const NextLesson = ({ nTitle, step, router, unlock, setUnlock }) => {
+export const NextLesson = () => {
+  const { data, step, router, unlock, setUnlock } = useAula()
   return (
     <section className={styles.cont} id='button-next'>
       <h3 className={styles.title}>Siguiente clase</h3>
@@ -20,10 +22,10 @@ export const NextLesson = ({ nTitle, step, router, unlock, setUnlock }) => {
         </picture>
         <div className={styles.button_text}>
           <p className={styles.button_text_nc}>CLASE {step + 1}</p>
-          <p className={styles.button_text_nct}>{nTitle}</p>
+          <p className={styles.button_text_nct}>{data[step + 1].title}</p>
         </div>
       </div>
-      <p className={styles.message}>Necesitas terminar de ver el video para desbloquar la siguiente clase</p>
+      <p className={styles.message}>Necesitas terminar de ver esta clase para desbloquear la siguiente</p>
     </section>
   )
 }

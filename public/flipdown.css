@@ -36,7 +36,7 @@
 /********** Theme: light **********/
 /* Font styles */
 .flipdown.flipdown__theme-light {
-  font-family: Montserrat;
+  font-family: Poppins;
   font-weight: 700;
 }
 .flipdown{
@@ -45,27 +45,27 @@
 }
 /* Rotor group headings */
 .flipdown.flipdown__theme-light .rotor-group-heading:before {
-  color: #EEEEEE;
+  color: var(--secondary);
   font-weight: 400;
   margin-bottom: 5px;
 }
 /* Delimeters */
 .flipdown.flipdown__theme-light .rotor-group:nth-child(n+2):nth-child(-n+3):before,
 .flipdown.flipdown__theme-light .rotor-group:nth-child(n+2):nth-child(-n+3):after {
-  background-color: #DDDDDD;
+  background-color: var(--secondary);
 }
 /* Rotor tops */
 .flipdown.flipdown__theme-light .rotor,
 .flipdown.flipdown__theme-light .rotor-top,
 .flipdown.flipdown__theme-light .rotor-leaf-front {
-  color: #222222;
-  background-color: #DDDDDD;
+  color: var(--foreground);
+  background-color: var(--secondary);
 }
 /* Rotor bottoms */
 .flipdown.flipdown__theme-light .rotor-bottom,
 .flipdown.flipdown__theme-light .rotor-leaf-rear {
-  color: #333333;
-  background-color: #EEEEEE;
+  color: var(--foreground);
+  background-color: var(--secondary);
 }
 /* Hinge */
 .flipdown.flipdown__theme-light .rotor:after {
