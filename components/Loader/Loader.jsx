@@ -1,5 +1,5 @@
 import { useTransition, animated as a, config } from 'react-spring'
-import { useApp } from 'pages/AppContext'
+import { useApp } from '@context/AppContext'
 
 import styles from './loader.module.css'
 

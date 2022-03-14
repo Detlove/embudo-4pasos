@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { useTransition, animated as a, config } from 'react-spring'
 import OneSignal from 'react-onesignal'
-import { useAula } from 'pages/aula/AulaContext'
+import { useAula } from '@context/AulaContext'
 
 import styles from './notifrequest.module.css'
 

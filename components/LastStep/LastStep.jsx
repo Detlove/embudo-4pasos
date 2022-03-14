@@ -1,6 +1,6 @@
 import SClock from './SClock'
 import SGift from './SGift'
-import { useAula } from 'pages/aula/AulaContext'
+import { useAula } from '@context/AulaContext'
 
 import styles from './laststep.module.css'
 import { useState, useEffect } from 'react'

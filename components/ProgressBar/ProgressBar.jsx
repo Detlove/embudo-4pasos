@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useAula } from 'pages/aula/AulaContext'
+import { useAula } from '@context/AulaContext'
 import styles from './progressbar.module.css'
 
 export const ProgressBar = () => {

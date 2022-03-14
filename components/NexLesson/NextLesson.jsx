@@ -1,4 +1,4 @@
-import { useAula } from 'pages/aula/AulaContext'
+import { useAula } from '@context/AulaContext'
 import styles from './nextlesson.module.scss'
 import SLock from './SLock'
 

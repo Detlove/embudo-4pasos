@@ -1,7 +1,7 @@
 import Vimeo from '@u-wave/react-vimeo'
 import { useState } from 'react'
-import { useAula } from 'pages/aula/AulaContext'
-import { useApp } from 'pages/AppContext'
+import { useAula } from '@context/AulaContext'
+import { useApp } from '@context/AppContext'
 
 import styles from './video.module.css'
 export const Video = () => {

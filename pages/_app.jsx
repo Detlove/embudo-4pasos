@@ -1,7 +1,7 @@
 import '@styles/global.css'
 import { Loader } from '@components/Loader/Loader'
 
-import { AppProvider } from './AppContext.js'
+import { AppProvider } from '@context/AppContext.js'
 
 export default ({ Component, pageProps }) => {
   return (

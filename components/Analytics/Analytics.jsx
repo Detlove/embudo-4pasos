@@ -1,7 +1,7 @@
 import Script from 'next/script'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
-import { useAula } from 'pages/aula/AulaContext'
+import { useAula } from '@context/AulaContext'
 
 export const Analytics = () => {
   const router = useRouter()

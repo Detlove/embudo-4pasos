@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { AulaProvider, useAula } from './AulaContext'
+import { AulaProvider, useAula } from '@context/AulaContext'
 
 import { Analytics } from '@components/Analytics/Analytics'
 
